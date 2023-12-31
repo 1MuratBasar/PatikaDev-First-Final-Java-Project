@@ -3,12 +3,15 @@
  * Java dilinde yazılmış olan bir mayın tarlası oyunudur.
  * Yazar: @muratbaşar
  * Kullanım: Repoyu git clone ile klonlayarak, IntelliJ IDE'sinde açabilirsiniz.
+ *Sınıf ve Metot açıklamaları README.md dosyasında ilgili class larda numaralandırılarak belirtildiği şekilde açıklanmıştır.
  */
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        
+       // Step 1: Dışarıdan girilecek değerler ile matris boyutu belirlenmesi ve bunun 2*2 den az olmaması koşuluyla kontrol edilmesi.
         
         Scanner scan = new Scanner(System.in);
         int row=0, column=0;
@@ -33,6 +36,7 @@ public class Main {
             }
 
         }
+        // Step 2: Step 1 tamamlandıktan sonra MineField ile MineSweeper nesnesi oluşturulması ve bu nesne ile run() metotunun  çağrılması ile oyun başlatılmıştır.
         MineField MineSpeewer = new MineField(row,column);
         MineSpeewer.run();
 
